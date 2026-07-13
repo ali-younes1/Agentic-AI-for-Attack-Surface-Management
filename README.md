@@ -33,6 +33,37 @@ The scanning workflow includes:
 4. The platform performs asset discovery, enumeration, fingerprinting, and vulnerability detection.
 5. Results are stored in MongoDB and summarized by the AI.
 
+## 🧪 Example Usage
+
+In the Streamlit app, the user can ask:
+
+```text
+Scan domain younesali.com
+```
+
+The agent checks MongoDB for an existing record and asks for confirmation before starting a new scan.
+
+The user can then reply:
+
+```text
+yes
+```
+
+After completing multiple scans, the user can retrieve the saved scan history:
+
+```text
+What is the database history of younesali.com?
+```
+
+The user can also compare two previous scans:
+
+```text
+compare scan 10 and scan 5
+```
+
+During development, I tested the project against my own personal website, [younesali.com](https://younesali.com).
+
+
 ## 📋 Requirements
 
 This project is designed to run in a Linux environment or WSL on Windows.
@@ -164,35 +195,6 @@ pip install -r requirements.txt
 streamlit run streamlit_app.py
 ```
 
-## 🧪 Example Usage
-
-In the Streamlit app, the user can ask:
-
-```text
-Scan domain younesali.com
-```
-
-The agent checks MongoDB for an existing record and asks for confirmation before starting a new scan.
-
-The user can then reply:
-
-```text
-yes
-```
-
-After completing multiple scans, the user can retrieve the saved scan history:
-
-```text
-What is the database history of younesali.com?
-```
-
-The user can also compare two previous scans:
-
-```text
-compare scan 10 and scan 5
-```
-
-During development, I tested the project against my own personal website, [younesali.com](https://younesali.com).
 
 ## ⚠️ Responsible Use
 
