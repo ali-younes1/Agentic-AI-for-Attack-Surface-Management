@@ -4,6 +4,39 @@ An agentic AI platform for authorized attack surface discovery, service fingerpr
 
 The user submits a domain through a Streamlit chat interface. A FastAPI backend checks MongoDB for previous scan data, requests confirmation before scanning, runs the security workflow, stores the results, and generates a concise AI summary.
 
+## 🧪 Demo and Example Usage
+
+[▶️ Watch the demo on YouTube](https://youtu.be/-J3b0zDmmBE)
+
+In the Streamlit app, the user can ask:
+
+```text
+Scan domain younesali.com
+```
+
+The agent checks MongoDB for an existing record and asks for confirmation before starting a new scan.
+
+The user can then reply:
+
+```text
+yes
+```
+
+After completing multiple scans, the user can retrieve the saved scan history:
+
+```text
+What is the database history of younesali.com?
+```
+
+The user can also compare two previous scans:
+
+```text
+Compare scan 10 and scan 5
+```
+
+During development, I tested the project against my own personal website, [younesali.com](https://younesali.com).
+
+
 ## 🔄 Architecture
 
 ![Agentic ASM Workflow](docs/agentic-asm-workflow.png)
@@ -29,37 +62,6 @@ The scanning pipeline uses several security tools:
 * `httpx` for HTTP service enumeration and fingerprinting
 * `nmap` because not every live host exposes an HTTP service; some hosts may expose other services or appear live only at the DNS level
 * `nuclei` for vulnerability detection
-
-## 🧪 Example Usage
-
-In the Streamlit app, the user can ask:
-
-```text
-Scan domain younesali.com
-```
-
-The agent checks MongoDB for an existing record and asks for confirmation before starting a new scan.
-
-The user can then reply:
-
-```text
-yes
-```
-
-After completing multiple scans, the user can retrieve the saved scan history:
-
-```text
-What is the database history of younesali.com?
-```
-
-The user can also compare two previous scans:
-
-```text
-compare scan 10 and scan 5
-```
-
-During development, I tested the project against my own personal website, [younesali.com](https://younesali.com).
-
 
 ## 📋 Requirements
 
