@@ -6,6 +6,8 @@ The user submits a domain through a Streamlit chat interface. A FastAPI backend 
 
 ## 🧪 Demo and Example Usage
 
+▶️ **[Watch the project demo on YouTube](https://youtu.be/-J3b0zDmmBE)**
+
 In the Streamlit app, the user can ask:
 
 ```text
@@ -34,7 +36,6 @@ Compare scan 10 and scan 5
 
 During development, I tested the project against my own personal website, [younesali.com](https://younesali.com).
 
-[▶️ Watch the demo on YouTube](https://youtu.be/-J3b0zDmmBE)
 
 ## 🔄 Architecture
 
