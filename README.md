@@ -8,30 +8,27 @@ The user submits a domain through a Streamlit chat interface. A FastAPI backend 
 
 ![Agentic ASM Workflow](docs/agentic-asm-workflow.png)
 
+## 💻 Tech Stack
+
 The project uses:
 
-- **Streamlit** for the chat interface
-- **FastAPI** for the backend
-- **LangChain and Gemini** for agent coordination and reporting
-- **MongoDB** for scan storage
-- **Docker Compose** for local database services
+* **Streamlit** for the chat interface
+* **FastAPI** for the backend
+* **LangChain and Gemini** for agent coordination and reporting
+* **MongoDB** for scan storage
+* **Docker Compose** for local database services
 
-The scanning workflow includes:
+## 🔍 Scanning Pipeline
 
-- `subfinder` and `assetfinder` for passive subdomain discovery
-- `shuffledns` for brute-force subdomain discovery
-- `dnsx` for DNS resolution
-- `httpx` for HTTP service discovery and technology fingerprinting
-- `nmap` for port scanning
-- `nuclei` for vulnerability detection
+The scanning pipeline uses several security tools:
 
-## 🤖 How It Works
-
-1. The user enters a domain.
-2. The agent checks MongoDB for an existing record.
-3. The agent asks for confirmation before starting a new scan.
-4. The platform performs asset discovery, enumeration, fingerprinting, and vulnerability detection.
-5. Results are stored in MongoDB and summarized by the AI.
+* `subfinder` for passive and reliable subdomain enumeration
+* `assetfinder` for fast results from known sources
+* `shuffledns` for deeper brute-force-based discovery
+* `dnsx` to check which subdomains are live
+* `httpx` for HTTP service enumeration and fingerprinting
+* `nmap` because not every live host exposes an HTTP service; some hosts may expose other services or appear live only at the DNS level
+* `nuclei` for vulnerability detection
 
 ## 🧪 Example Usage
 
@@ -137,8 +134,8 @@ data/
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/agentic-asm-platform.git
-cd agentic-asm-platform
+git clone https://github.com/ali-younes1/Agentic-AI-for-Attack-Surface-Management.git
+cd Agentic-AI-for-Attack-Surface-Management
 ```
 
 ### 🔑 Environment Variables
