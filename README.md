@@ -164,15 +164,33 @@ pip install -r requirements.txt
 streamlit run streamlit_app.py
 ```
 
-## 🧪 Example
+## 🧪 Example Usage
 
-Enter a domain in the Streamlit chat:
+In the Streamlit app, the user can ask:
 
 ```text
-Scan younesali.com
+Scan domain younesali.com
 ```
 
-The agent checks for existing scan data and asks for approval before starting the workflow.
+The agent checks MongoDB for an existing record and asks for confirmation before starting a new scan.
+
+The user can then reply:
+
+```text
+yes
+```
+
+After completing multiple scans, the user can retrieve the saved scan history:
+
+```text
+What is the database history of younesali.com?
+```
+
+The user can also compare two previous scans:
+
+```text
+compare scan 10 and scan 5
+```
 
 During development, I tested the project against my own personal website, [younesali.com](https://younesali.com).
 
