@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pymongo
+python-dotenv
+pydantic
+google-generativeai
+aiodnsbrute
+langchain
+langchain-google-genai
+google.genai

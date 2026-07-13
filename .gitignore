@@ -1,0 +1,8 @@
+.env
+backend/.env
+.venv/
+frontend/.env
+__pycache__/
+data/outputs/
+data/wordlists/
+*.log
